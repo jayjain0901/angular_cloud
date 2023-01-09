@@ -1,0 +1,41 @@
+<div class="mydiv" >
+  <button style="margin-top: 60px;" class="btn btn-primary" (click)="getAWSData()">CLick me | AWS</button>
+  <br />
+
+  <button class="btn btn-danger" (click)="getGCPData()">CLick Me | GCP</button>
+  <br />
+
+  <button class="btn btn-dark" (click)="getAzureData()">
+    CLick me | Azure
+  </button>
+  <br />
+</div>
+
+
+
+<div>
+  <table class="table table-dark">
+    <thead>
+      <th>Course</th>
+      <th>Course Name</th>
+      <th>price</th>
+      <th>duration</th>
+      <th>mode</th>
+      <th>platform</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let data of cloudD">
+
+      <td>{{ data.name }}</td>
+      
+       <td>{{ data.name }}</td>
+          <td>{{ data.price }}</td>
+          <td>{{ data.duration }}</td>
+          <td>{{ data.mode }}</td>
+          <td>{{ data.platform }}</td> 
+
+        </tr>
+    </tbody>
+  </table>
+</div>
